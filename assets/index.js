@@ -4,6 +4,24 @@ const QUIZ_SECTIONS = document.querySelectorAll(".quiz-section");
 const START_SECTION = document.getElementById("start");
 const START_BTN = document.getElementById("start-button");
 
+// alert to clicking start button 
+const sButton = document.getElementById("start-button");
+debugger
+sButton.addEventListener("click", function handleClick() {
+  window.alert("You clicked me!");
+});
+<script type="text/javascript">
+const sButton = document.getElementById("submit");
+sButton.addEventListener("click", function handleClick() {
+  window.alert("You clicked me!")
+});
+</script>
+
+
+
+
+
+
 //Quiz questions
 const QUIZ_SECTION = document.getElementById("quiz-questions");
 const TIME_REMAINING = document.getElementById("time-remaining");
@@ -30,11 +48,11 @@ class Question {
   }
 }
 const QUESTION_1 = new Question("Commonly used data types DO NOT include: ", 
-  ["Strings", "Booleans", "Alerts", "Numbers"], 2);
+  ["Strings", "Booleans", "Alerts", "Animals"], 2);
 const QUESTION_2 = new Question("The condition in an if / else statement is enclosed within blank.", 
   ["Quotes", "Curly brackets", "Parentheses", "Square brackets"], 2);
 const QUESTION_3 = new Question("Arrays in JavaScript can be used to store blank.", 
-  ["Numbers and Strings", "Other arrays", "Booleans", "All of the above"], 3);
+  ["Numbers", "Other arrays", "Booleans", "All of the above"], 3);
 const QUESTION_4 = new Question("String values must be enclosed within blank when being assigned to variables.", 
   ["Commas", "Curly brackets", "Quotes", "Parentheses"], 2);
 const QUESTION_5 = new Question("A useful tool used during development and debugging for printing content to the debugger is: ", 
@@ -43,7 +61,7 @@ const QUESTION_LIST = [QUESTION_1, QUESTION_2, QUESTION_3, QUESTION_4, QUESTION_
 
 let currentQuestion = 0;
 
-let totalTime = 75;
+let totalTime = 100;
 let totalTimeInterval;
 let choiceStatusTimeout; 
 
@@ -232,11 +250,11 @@ function getNewHighscoreEntry(initials, score) {
 function isInputValid(initials) {
   let errorMessage = "";
   if (initials === "") {
-    errorMessage = "You can't submit empty initials!";
+    errorMessage = "You can't submit nothing!";
     displayFormError(errorMessage);
     return false;
   } else if (initials.match(/[^a-z]/ig)) {
-    errorMessage = "Initials may only include letters."
+    errorMessage = "Initials are only letters (unless you're Elon Musk's child)"
     displayFormError(errorMessage);
     return false;
   } else {

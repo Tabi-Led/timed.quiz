@@ -21,3 +21,5 @@ WHEN the game is over
 THEN I can save my initials and score
 
 Still cannot figure out how to screenshot on my mac 
+https://stackoverflow.com/questions/62767295/quiz-timer-in-javascript - source 
+https://stackoverflow.com/questions/72079254/help-to-create-my-simple-javascript-quiz

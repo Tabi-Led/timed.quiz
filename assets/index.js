@@ -10,12 +10,7 @@ debugger
 sButton.addEventListener("click", function handleClick() {
   window.alert("You clicked me!");
 });
-<script type="text/javascript">
-const sButton = document.getElementById("submit");
-sButton.addEventListener("click", function handleClick() {
-  window.alert("You clicked me!")
-});
-</script>
+
 
 
 
